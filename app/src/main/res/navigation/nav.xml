@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/gameFragment">
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.quizz.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_gameFragment_to_resultActivity"
+            app:destination="@id/resultActivity" >
+            <argument
+                android:name="username"
+                app:argType="string" />
+            <argument
+                android:name="score"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <activity
+        android:id="@+id/resultActivity"
+        android:name="com.example.quizz.ResultActivity"
+        android:label="activity_result"
+        tools:layout="@layout/activity_result" />
+
+</navigation>

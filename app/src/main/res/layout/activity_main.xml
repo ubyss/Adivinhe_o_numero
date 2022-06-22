@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="300dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="27dp"
+        android:background="@color/buttons"
+        android:text="@string/ir_para_o_jogo"
+        app:layout_constraintBottom_toTopOf="@+id/btn_moreInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_username" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginBottom="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_putNamelbl"
+        app:srcCompat="@drawable/infnet" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="99dp"
+        android:layout_marginBottom="149dp"
+        android:text="@string/adivinhe_o_n_mero"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/edt_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_username"
+        android:layout_width="233dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="@string/nome"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start"
+        app:layout_constraintStart_toStartOf="@+id/tv_putNamelbl"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tv_putNamelbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="243dp"
+        android:layout_marginBottom="289dp"
+        android:labelFor="@id/edt_username"
+        android:text="@string/coloque_seu_nome_para_come_ar"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="54dp"
+        android:text="@string/projeto_feito_por_thiago_vin_cius"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/btn_moreInfo" />
+
+    <Button
+        android:id="@+id/btn_moreInfo"
+        android:layout_width="300dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="122dp"
+        android:background="@color/buttons"
+        android:text="@string/como_jogar"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
